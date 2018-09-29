@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.security.KeyStore;
@@ -27,10 +29,16 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        if (supportFingerprint()) {
-            initKey();
-            initCipher();
-        }
+        Button button = findViewById(R.id.zhiwen);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (supportFingerprint()) {
+                    initKey();
+                    initCipher();
+                }
+            }
+        });
     }
 
     public boolean supportFingerprint() {

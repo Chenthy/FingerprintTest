@@ -5,5 +5,14 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <Button
+        android:textColor="#fff"
+        android:background="#118890"
+        android:id="@+id/zhiwen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:text="进行指纹识别验证" />
 
 </FrameLayout>
